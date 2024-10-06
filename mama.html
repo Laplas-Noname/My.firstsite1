@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привітання для Мами Юлі</title>
+    <link rel="website icon" href="https://th.bing.com/th/id/OIP.BN9R29uLKFp0WzVpCw9WkwHaHZ?rs=1&pid=ImgDetMain">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.pexels.com/photos/196664/pexels-photo-196664.jpeg') no-repeat center center fixed;
+            background-size:cover;
+            color: #fff;
+            text-align: center;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 50px;
+            width: 90%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ffcc00;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .heart {
+            color: #ff3366;
+            font-size: 5em;
+            margin-top: 20px;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .music-button {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .music-button:hover {
+            background-color: #ff9900;
+        }
+        @media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+    .heart {
+        font-size: 3em;
+    }
+}
+        @media (min-width:768px) and (max-width: 1024px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1.25em;
+            }
+            .heart {
+                font-size: 4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>З Днем Народження, Мама!</h1>
+        <p>Бажаю тобі безмежного щастя, здоров’я та тепла!</p>
+        <p>Ти найкраща мама у світі!</p>
+        <div class="heart">❤️</div>
+
+        <!-- Кнопка для запуску музики -->
+        <button class="music-button" onclick="playMusic()">Натисни, щоб почути музику 🎶</button>
+
+        <!-- Аудіо -->
+        <audio id="birthdayMusic" src="static/audio/spok.mp3"></audio>
+    </div>
+
+    <script>
+        function playMusic() {
+            var audio = document.getElementById('birthdayMusic');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
